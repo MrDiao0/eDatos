@@ -2,39 +2,39 @@
 #include <iostream>
 using namespace std;
 
-template <class T> 
-class Pila : public vector <T>{
+template <class  tm> 
+class Pila : public vector < tm>{
 	public:
 		Pila ();
-		void adicionar (T elem);
-		T eliminar ();
+		void adicionar ( tm elem);
+		 tm eliminar ();
 		void mostrar ();
 }
 
-template <class T>
+template <class  tm>
 
-Pila <T>::Pila (): vector<T> () {}
+Pila < tm>::Pila (): vector< tm> () {}
 
-template <class T>
+template <class tm>
 
-void Pila <T>::adicionar (T elem) {
+void Pila < tm>::adicionar ( tm elem) {
 	this->push_back (elem);
 }
 
-template <class T>
+template <class  tm>
 
-void Pila <T>::mostrar () {
+void Pila < tm>::mostrar () {
 	int n = this->size ();
 	for (int i=0; i < n; i++)
 		cout << this->at (i)  << ", ";
 	cout << endl;
 }
 
-template <class T>
+template <class  tm>
 
-T Pila <T>::eliminar () {
+ tm Pila < tm>::eliminar () {
 	int posUltimo = this->size () - 1;
-	T elem = this->at (posUltimo);
+	 tm elem = this->at (posUltimo);
 	this->pop_back();
 	return elem;
 }

@@ -2,26 +2,26 @@
 #include <iostream>
 using namespace std;
 
-template <class T> 
-class Cola : public vector <T>
+template <class tm> 
+class Cola : public vector <tm>
 {
 	public:
 		Cola ();
-		void adicionar (T elem);
+		void adicionar (tm elem);
 		void mostrar ();
-		T eliminar();
+		tm eliminar();
 };
-template <class T>
-Cola <T>::Cola (): vector<T> () {}
+template <class tm>
+Cola <tm>::Cola (): vector<tm> () {}
 
-template <class T>
-void Cola <T>::adicionar (T elemento) 
+template <class tm>
+void Cola <tm>::adicionar (tm elemento) 
 {	
 	this -> push_back (elemento);
 }
 
-template <class T>
-void Cola <T>::mostrar () 
+template <class tm>
+void Cola <tm>::mostrar () 
 {
 	int n = this->size ();
 	for (int i=0; i < n; i++)
@@ -31,11 +31,11 @@ void Cola <T>::mostrar ()
 	cout << endl;
 }
 
-template <class T>
-T Cola <T>::eliminar()
+template <class tm>
+tm Cola <tm>::eliminar()
 {
 	int First = 0;
-	T elemento = this-> at(First);
+	tm elemento = this-> at(First);
 	this -> erase(this -> begin());
 	return elemento;
 }

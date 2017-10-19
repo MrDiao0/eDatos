@@ -1,26 +1,21 @@
 #include "cola.cpp"
 #include <stdexcept>
-int main () 
-{
-	try 
-	{
-		Cola <int> c1;
-		
-		c1.adicionar (2);
-		c1.adicionar (5);
-		c1.adicionar (7);
-		
-		c1.mostrar ();
-		c1.eliminar ();
-		c1.mostrar ();
-		c1.eliminar ();
-		c1.mostrar ();
-		c1.eliminar ();
-		c1.mostrar ();
-		c1.eliminar ();
+
+int main(){
+	try{
+		Cola <int> c;
+		c.adicionar (5);
+		c.adicionar (10);
+		c.adicionar (15);
+
+		c.mostrar ();
+		c.eliminar ();
+		c.mostrar ();
+		c.eliminar ();
+		c.mostrar ();
+		c.eliminar ();
 	}
-	catch (const std::out_of_range &oor) 
-	{
-  		cout << "No hay mas elementos en la cola" << endl;
+	catch (const std::out_of_range &oor){
+  		cout << "Cola se encuentra vacio" << endl;
  	}
 }
